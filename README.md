@@ -1,0 +1,1 @@
+![diagrama](out/diagrama/diagramaSecuenciaAnimales.png)

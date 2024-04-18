@@ -1,0 +1,50 @@
+@startuml diagramaSecuenciaAnimales
+
+class Animal
+class Tienda
+class Persona
+class Mascota 
+class Propietario
+class Perro
+class Perico
+class Chigüiro
+class Productos
+
+' Atributos 
+Animal : *Nombre 
+Animal : *Raza 
+
+Persona : *Nombre
+Persona : *Edad
+
+Tienda : *Nombre
+Tienda : *Dirección
+
+Productos : *Nombre
+Productos : *Caducidad
+Productos : *Empresa
+Productos : *Precio
+
+' Métodos 
+Animal : pasear()
+Animal : alimentar()
+
+Tienda : Vender()
+
+Propietario : Adoptar()
+
+' Relaciones entre clases
+Animal <|-- Mascota
+
+Tienda o-- Mascota
+Tienda o-- Productos
+
+Persona <|-- Propietario
+
+Mascota *-- Propietario
+Mascota <|-- Perro
+Mascota <|-- Perico
+Mascota <|-- Chigüiro
+
+
+@enduml
